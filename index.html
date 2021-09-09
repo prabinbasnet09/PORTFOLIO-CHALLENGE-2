@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta  charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+
+        <title> Portfolio </title>
+        <!-- importing the css libraries for fixing the settings for the webpage for different browsers -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- importing the css fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha512-auFYU/67J4exjspDmd+Jbt7f4oqE26GbpY2VJZaBgWsLll1NwQ+NPiU2HehCZjBqjlr0T8/NS0SWPwkU2MURKw==" crossorigin="anonymous" referrerpolicy="no-referrer" /-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <!-- Creating a button for the navigation bar to open up by using a button tag -->
+            <button class = "nav_toggle" aria-label="toggle navigation">
+                <span class = "hamburger"></span>
+            </button>
+
+            <!-- Creating a navigation bar and the items to be placed ion the navigation menu -->
+            <nav class = "nav">
+                <ul class = "nav_list">
+                    <li class = "nav_item"><a href="#home" class = "nav_link">Home</a></li>
+                    <li class = "nav_item"><a href="#about" class = "nav_link">About me</a></li>
+                    <li class = "nav_item"><a href="#work" class = "nav_link">My projects</a></li>
+                    <li class = "nav_item"><a href="#skills" class = "nav_link">My Skills</a></li>
+                    <li class = "nav_item"><a href="#contact" class = "nav_link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+            <!-- Introduction -->
+            <section class="intro" id = "home" >
+                <h1 class = "section_title section_title--intro">
+                    Hi, I am <strong> Prabin Basnet</strong>
+                </h1>
+
+                <p class="section_subtitle section_subtitle--intro">WEB DEVELOPER</p>
+                <img src="img2.jpg" alt="" class="intro_img">
+            </section>
+
+            <!-- About me -->
+            <section id = "services" class = "my-services">
+                <h2 class = "section_title section_title--services">What I do</h2>
+                <div class = "services"> <!-- defines the list of services -->
+                    <div class = "service"> <!-- Defines each service in the list -->
+                        <h3>Design and Development</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam doloremque culpa  
+                        uae voluptate tempribus! Voluptatem,sit quis cum aperiam reiciendis praesentium iste 
+                        corporis at quaerat soluta delectus tempore assumenda qui.</p>
+                    </div> <!-- end to service 1 -->
+
+                    <div class = "service">
+                        <h3>Data Analyst</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ea voluptate velit harum
+                        beatae reprehenderit quo amet, odit magni natus, consequuntur est, adipisci tempore expedita 
+                        molestiae ad ducimus ratione ex!</p>
+                    </div>  <!-- end to service 2-->
+
+                    <div class = "service">
+                        <h3>E-commerce</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis iure error ab vel 
+                        beatae expedita unde temporibus veritatis nulla eaque. Molestiae impedit quas eveniet officiis 
+                        quod minus minima repudiandae temporibus?</p>
+                    </div> <!-- end to service 3 -->
+                </div> <!-- end to services -->
+
+                <a href = "#work" class = "btn">My work</a> <!-- creating a direct reference to my wwork section -->
+            </section>
+
+            <!-- About me -->
+            <section id="about" class="about_me">
+                <h2 class="about_title"> Who I am </h2>
+                <p class = "about_subtitle">Programmer and Designer</p>
+
+                <div class="about_me_body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad consectetur velit rerum corrupti esse 
+                    delectus, dolorum maiores, ex libero molestiae, odio quae illo. Iusto, neque officiis in rerum facilis 
+                    eum! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi assumenda aliquam totam soluta 
+                    recusandae quia itaque doloribus et ipsam nobis laborum laboriosam saepe eius veritatis, quo natus illo 
+                    optio doloremque.</p>
+                </div>
+
+                <img src="img3.jpg" alt="" class = "about_me_img">
+            </section>
+
+            <!--My work-->
+            <section id="work" class="my_work">
+                <h2 class="my_work_title">My work</h2>
+                <p class = "section_subtitle section_subtitle--work">A selection of my range of work</p>
+
+                <div class="portfolio">
+                    <!--Portfolio Item 1-->
+                    <a href="#" class="portfolio_item">
+                        <img src="img4.jpg" alt="" class="portfolio_img">
+                    </a>
+
+                    <!--Portfolio Item 2-->
+                    <a href="#" class="portfolio_item">
+                        <img src="img4.jpg" alt="" class="portfolio_img">
+                    </a>
+
+                    <!--Portfolio Item 3-->
+                    <a href="#" class="portfolio_item">
+                        <img src="img4.jpg" alt="" class="portfolio_img">
+                    </a>
+
+                    <!--Portfolio Item 4-->
+                    <a href="#" class="portfolio_item">
+                        <img src="img4.jpg" alt="" class="portfolio_img">
+                    </a>
+                </div>
+            </section>
+
+            <section id="skills" class="my_skills">
+                <h2 class="my_skills_title">My Skills</h2>
+                
+                <div class = "container">
+                    <div class="skill_box">
+                        <div class="skill_title">
+                            <div class="skill_img">
+                                <img src = "/java.jpg" class = "skill_icon">
+                            </div>
+                            <p class = "language_name"><strong>JAVA</strong></p>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
+                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
+                            Voluptas error qui id? Delectus, odit.</p>
+                    </div>
+
+                    <div class="skill_box">
+                        <div class="skill_title">
+                            <div class="skill_img">
+                                <img src = "/python.png" class = "skill_icon">
+                            </div>
+                            <p class = "language_name"><strong>Python</strong></p>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
+                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
+                            Voluptas error qui id? Delectus, odit.</p>
+                    </div>
+
+                    <div class="skill_box">
+                        <div class="skill_title">
+                            <div class="skill_img" class="skill_icon">
+                                <img src = "/javascript.png" class = "skill_icon">
+                            </div>
+                            <p class = "language_name"><strong>JavaScript</strong></p>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
+                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
+                            Voluptas error qui id? Delectus, odit.</p>
+                    </div>
+
+                    <div class="skill_box">
+                        <div class="skill_title">
+                            <div class="skill_img">
+                                <img src = "/html5.png" class="skill_icon">
+                            </div>
+                            <p class = "language_name"><strong>HTML 5</strong></p>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
+                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
+                            Voluptas error qui id? Delectus, odit.</p>
+                    </div>
+
+                    <div class="skill_box">
+                        <div class="skill_title">
+                            <div class="skill_img">
+                                <img src = "/css3.png" class="skill_icon">
+                            </div>
+                            <p class = "language_name"><strong>CSS 3</strong></p>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
+                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
+                            Voluptas error qui id? Delectus, odit.</p>
+                    </div>
+
+                    <div class="skill_box">
+                        <div class="skill_title">
+                            <div class="skill_img">
+                                <img src = "/sql.png" class="skill_icon">
+                            </div>
+                            <p class = "language_name"><strong>PostgreSQL</strong></p>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
+                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
+                            Voluptas error qui id? Delectus, odit.</p>
+                    </div>
+
+                </div>
+
+            </section>
+        <!--Footer-->
+        <footer id= "contact" class = "footer">
+            <a href="prabinbasnet09@gmail.com" class="footer_link">prabinbasnet09@gmail.com</a>
+
+            <ul class = "social_lists">
+                <li class="social_list_item">
+                    <a class="social_list_link" href = "#"><i class="fab fa-github"></i></a>
+                </li>
+                
+                <li class="social_list_item">
+                    <a class="social_list_link" href = "#"><i class="fab fa-linkedin"></i></a>
+                </li>
+               
+                <li class="social_list_item">
+                    <a class="social_list_link" href = "#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="social_list_item">
+                    <a class="social_list_link" href = "#"><i class="fab fa-facebook"></i></a>
+                </li>
+            </ul>
+        </footer>
+
+        <script src="/navigation.js"></script>
+
+    </body>
+</html>
