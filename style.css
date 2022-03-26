@@ -1,616 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 /** Selects any or every element on html document and before and after are used to insert objects before and after any element*/
 *,
 *::before,
-*::after
-{
-    box-sizing: border-box;
+*::after {
+  box-sizing: border-box;
 }
 
 /* :root element is used to select the <html> element and are also used to define global variables*/
-:root{
-    
-    /*font-family*/
-    --ff--primary: 'Open Sans', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+:root {
+  /*font-family*/
+  --ff--primary: 'Open Sans', sans-serif;
+  --ff-secondary: 'Source Code Pro', monospace;
 
-    /*font-weight*/
-    --fw-reg: 300;
-    --fw-bold: 900;
+  /*font-weight*/
+  --fw-reg: 300;
+  --fw-bold: 900;
 
-    /*font-color*/
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+  /*font-color*/
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
 
-    /*font-size*/
-    --fs-h1: 3rem;  /*rem stands for root em*/
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
+  /*font-size*/
+  --fs-h1: 3rem; /*rem stands for root em*/
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
 
-    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), /* offset, right and down, blur, color*/
-          0.125em 0.125em 0.25em rgba(0,0,0,0.15); 
-}       
-.intro_img{
-    box-shadow: var(--bs);
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    /* offset, right and down, blur, color*/ 0.125em 0.125em 0.25em
+      rgba(0, 0, 0, 0.15);
+}
+.intro_img {
+  box-shadow: var(--bs);
 }
 
-.section_subtitle--intro{
-    display: inline-block;
+.section_subtitle--intro {
+  display: inline-block;
 }
 
 /*The @media rule is used in media queries to apply different styles for different media types/devices. Also, when changing the size of the tab or screen, the elements on the page get adjusted*/
 /* When the width of the screen is more than or equal to 800px the following values are applied else the above values are used*/
 @media (min-width: 800px) {
-    :root {
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
-    }
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
 }
 
 /* Adding a smooth scroll behavior */
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    background: var(--clr-light);  /*var is kind of specifying the variable i.e it allows to use the value of a CSS variable*/
-    color: var(--clr-dark);
-    margin: 0;
-    font-family: var(--ff-primary);
-    font-size: var(--fs-body);
-    line-height: 1.6; /* Defines the line-spacing between the lines of the text */
+body {
+  background: var(
+    --clr-light
+  ); /*var is kind of specifying the variable i.e it allows to use the value of a CSS variable*/
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6; /* Defines the line-spacing between the lines of the text */
 }
 
 /* Padding the sections */
-section{
-    padding: 5em 2em;
+section {
+  padding: 5em 2em;
 }
-img{
-    display: block;
-    max-width: 100%;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-strong { font-weight: var(--fw-bold) }
+strong {
+  font-weight: var(--fw-bold);
+}
 
-:focus{
-    outline: 3px solid var(--clr-accent);
-    outline-offset: 3px;
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
 }
 
 /* Defining buttons */
-.btn{
-    display: inline-block;
-    padding: .5em 2.5em;
-    background: var(--clr-accent);
-    color: var(--clr-dark);
-    text-decoration: none;
-    cursor: pointer;
-    font-size: .8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: var(--fx-bold);
-    transition: transform 200ms ease-in-out;  /* Allows smooth transition by delaying some time*/
-} 
+.btn {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fx-bold);
+  transition: transform 200ms ease-in-out; /* Allows smooth transition by delaying some time*/
+}
 
 /* Defining buttons when hover --putting cursor on it*/
-.btn:hover{
-    transform: scale(1.1);
+.btn:hover {
+  transform: scale(1.1);
 }
 
 /* Typography - Styling the text in HTML & CSS */
 h1,
 h2,
 h3 {
-    line-height: 1;
-    margin: 0;
+  line-height: 1;
+  margin: 0;
 }
 
-h1 { font-size: var(--fs-h1);}
-h2 { font-size: var(--fs-h2);}
-h3 { font-size: var(--fs-h3);}
-
-.section_title{
-    margin-bottom: .25em;
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
 }
 
-.section_title--intro{
-    font-weight: var(--fw-reg);
+.section_title {
+  margin-bottom: 0.25em;
+}
+
+.section_title--intro {
+  font-weight: var(--fw-reg);
 }
 
 .section_title--intro strong {
-    display: block;
+  display: block;
 }
-.section_subtitle{
-    margin: 0;
-    font-size: var(--fs-h3);
+.section_subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
 }
 
 /* Creates a background for all the subtitles in the page*/
 .section_subtitle--intro,
 .about_subtitle {
-    background: var(--clr-accent);
-    padding: .25em 1em;
-    font-family: var(--ff-secondary);
-    margin-bottom: 1em;
+  background: var(--clr-accent);
+  padding: 0.25em 1em;
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
 }
 
 /* Need to check back on this */
 .section_subtitle_work {
-    color: var(--clr-accent);
-    font-weight: var(--fw-bold);
-    margin-bottom: 2em;
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
 }
-
 
 /* navigation bar/header */
 
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
 }
 
 .logo {
-    max-width: 100px;
+  max-width: 100px;
 }
 
 /* Styling the whole navigation section */
-.nav { 
-    position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;  /* If there are other elements that have the z index value then element with highest value wil overlap other elements */
-
-    transform: translate(100%);
-    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+.nav {
+  position: fixed;
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* If there are other elements that have the z index value then element with highest value wil overlap other elements */
+  transform: translate(100%);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 /* Styling the navigation list */
-.nav_list {
-    list-style: none;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    /* Note: Setting margin and padding to 0 will help to remove any extra defualt white space */
-    margin: 0;
-    padding: 0;
-
+.nav-menu {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* Note: Setting margin and padding to 0 will help to remove any extra defualt white space */
+  margin: 0;
+  padding: 0;
+  padding-left: 40%;
 }
 
-.nav_link{
-    color: inherit;  /* This will specifically change the color of the items int the navigation menu i.e. inherit the color property from its parent */
-    font-size: var(--fs-h2);
-    font-weight: var(--fw-bold);
-    text-decoration: none;
+.nav_link {
+  color: inherit; /* This will specifically change the color of the items int the navigation menu i.e. inherit the color property from its parent */
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
 }
 
 /* Creating a hover effect on navigation items */
-.nav_link:hover{
-    color: var(--clr-accent);
+.nav_link:hover {
+  color: var(--clr-accent);
 }
 
-.nav_toggle{
-    padding: .5em;
-    background: transparent;
-    border: 0;
-    cursor: pointer;  /* Used to change the mouse cursor when pointing it */
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    z-index: 1000;
+.nav_toggle {
+  padding: 0.5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer; /* Used to change the mouse cursor when pointing it */
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
 }
 
 /* Styling the events as a reference to the javascript */
 .nav_open .nav {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 /* Fixing the hamburger's posiiton so that it appears when the navigation menu is opened all the time ( when scrolling )*/
 .nav_open .nav_toggle {
-    position: fixed;
+  position: fixed;
 }
 
 /* Rotating the hamburger to make an X*/
-.nav_open .hamburger{
-    transform: rotate(.625turn);            /* 1 turn == 360 degrees*/
+.nav_open .hamburger {
+  transform: rotate(0.625turn); /* 1 turn == 360 degrees*/
 }
 
-
-.nav_open .hamburger::before{
-    transform: rotate(90deg) translateX(-6px);
+.nav_open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
 }
 
-.nav_open .hamburger::after{
-    opacity: 0;
-} 
-
+.nav_open .hamburger::after {
+  opacity: 0;
+}
 
 /* Creating a three vertical lines for the navigaton */
-.hamburger{
-    display: block;
-    position: relative;
+.hamburger {
+  display: block;
+  position: relative;
 }
 
 /* Defining the properties for all the three lines: the center is the main one and the other 2 are inserted before and after */
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    content: '';
-    background: var(--clr-accent);
-    width: 2em;
-    height: 3px;
-    border-radius: 1em;
-    transition: trasform 250ms ease-in-out; 
+  content: '';
+  background: var(--clr-accent);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: trasform 250ms ease-in-out;
 }
 
 .hamburger::before,
 .hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
-.hamburger::before {top: 6px;}
-.hamburger::after{ bottom: 6px;}
+.hamburger::before {
+  top: 6px;
+}
+.hamburger::after {
+  bottom: 6px;
+}
 
 /*Intro Section*/
 
 .intro {
-    position: relative;
+  position: relative;
 }
 
-/* Defining the intro section when the width is at least 600px */ 
+/* Defining the intro section when the width is at least 600px */
 @media (min-width: 600px) {
-    .intro{
-        display: grid;
-        width: min-content;
-        margin: 0 auto;
-        grid-column-gap: 1em;
-        grid-template-areas:    /* Defines the order of elements to be placed on a grid*/
-            "img title" 
-            "img subttitle";
-        grid-template-columns: min-content max-content; /* Defines the amount of content to be displayed on left and right based on the grid-template areas */
-    }
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:    /* Defines the order of elements to be placed on a grid*/
+      'img title'
+      'img subttitle';
+    grid-template-columns: min-content max-content; /* Defines the amount of content to be displayed on left and right based on the grid-template areas */
+  }
 }
 
-.intro_img{
-    grid-area: img;
-    min-width: 350px;
-    position: relative;     /* Used to bring the image forward*/
-    z-index: 2;             /* Does the same thing - brings the element forward if the value is poistive or 0 and puts backward if negative */
+.intro_img {
+  grid-area: img;
+  min-width: 350px;
+  position: relative; /* Used to bring the image forward*/
+  z-index: 2; /* Does the same thing - brings the element forward if the value is poistive or 0 and puts backward if negative */
 }
 
-.section_subtitle--intro{
-    align-self: start;
-    grid-column: -1/1;
-    grid-row: 2;
-    text-align: right;
-    position: relative;
-    left: -1.5em;
-    width: calc(100% + 1.5em);  /* Brings the background more on the left */
-} 
+.section_subtitle--intro {
+  align-self: start;
+  grid-column: -1/1;
+  grid-row: 2;
+  text-align: right;
+  position: relative;
+  left: -1.5em;
+  width: calc(100% + 1.5em); /* Brings the background more on the left */
+}
 
 /* My services section */
 
-.my-services{
-    background-color: var(--clr-dark);
-    background-image: url(https://images.ctfassets.net/k428n7s2pxlu/4w7qCXlTPOqCqaOGmySEcu/f0ac4b5241564991c1748b53ca89aaef/blog-post-blog-salesforce-developer-the-lucrative-coding-career-youve-never-heard-of.jpg);
-    background-size: cover;
-    color: var(--clr-light);
-    text-align: center;
+.my-services {
+  background-color: var(--clr-dark);
+  background-image: url(https://i.pinimg.com/originals/82/4b/87/824b877bf4c731e3fcc13a8881c3e982.jpg);
+  background-size: cover;
+  color: var(--clr-light);
+  text-align: center;
 }
 
 /* My services section title*/
-.section_title--services{
-    color: var(--clr-accent);
-    position: relative;
+.section_title--services {
+  color: var(--clr-accent);
+  position: relative;
 }
 
 /* Setting up the pseudo elements */
 .section_title--services::after {
-    content: '';    /* pseudo elements don't work without content */
-    display: block;
-    width: 3em;
-    height: 1px;
-    margin: 0.5em auto 1em;     /* top left-right bottom*/
-    background: var(--clr-light);
-    opacity: 0.7;
+  content: ''; /* pseudo elements don't work without content */
+  display: block;
+  width: 3em;
+  height: 1px;
+  margin: 0.5em auto 1em; /* top left-right bottom*/
+  background: var(--clr-light);
+  opacity: 0.7;
 }
 
 /* defining the services property*/
-.services{
-    margin-bottom: 4em;
+.services {
+  margin-bottom: 4em;
+  background-color: black;
+  opacity: 0.7;
+  padding: 20px;
 }
 
 /* defining the width of each service besides media query*/
-.service{
-    max-width: 500px;
-    margin: 0 auto;
+.service {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Defining the properties for services when the width of the screen is min 800px */
-@media (min-width: 800px){
-    .services{
-        display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+@media (min-width: 800px) {
+  .services {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    /* Defines for 2 siblings of the middle one (left and right) */
-    .service + .service {
-        margin-left: 2em;
-    }
+  /* Defines for 2 siblings of the middle one (left and right) */
+  .service + .service {
+    margin-left: 2em;
+  }
 }
-
 
 /* Defining the properties for about me section */
 
-.about_me{
-    max-width: 1000px;
-    margin: 0  auto; /* top-bottom left-right */
+.about_me {
+  max-width: 1000px;
+  margin: 0 auto; /* top-bottom left-right */
 }
 
 /* Defining the about me img */
-.about_me_img{
-    box-shadow: var(--bs);
-    
+.about_me_img {
+  box-shadow: var(--bs);
 }
 
 /* Defining about me section for a given minimum width*/
-@media  (min-width: 600px)
-{
-    .about_me{
-        display: grid;
-        grid-template-columns: 1fr 200px; /* fr is a short term for fraction measurement */
-        grid-template-areas: "title img"
-                             "subtitle img"
-                             "text img" ;
-        grid-column-gap: 2em;
-    }
+@media (min-width: 600px) {
+  .about_me {
+    display: grid;
+    grid-template-columns: 1fr 200px; /* fr is a short term for fraction measurement */
+    grid-template-areas:
+      'title img'
+      'subtitle img'
+      'text img';
+    grid-column-gap: 2em;
+  }
 
-    .about_title{
-        grid-area: title;
-    }
+  .about_title {
+    grid-area: title;
+  }
 
-    .about_subtitle{
-        grid-column: 1/-1;
-        grid-row: 2;
-        position: relative;
-        left:-2em;
-        width: calc(100% + 4em);
-        padding: auto;;
-    }
+  .about_subtitle {
+    grid-column: 1/-1;
+    grid-row: 2;
+    position: relative;
+    left: -2em;
+    width: calc(100% + 4em);
+    padding: auto;
+  }
 
-    .about_me_img{
-        grid-area: img;
-        position: relative;
-        z-index: 1
-    }
+  .about_me_img {
+    grid-area: img;
+    position: relative;
+    z-index: 1;
+  }
 }
-
 
 /* Defining the properties for my work section */
 
-.my_work{
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
-    text-align: center;
+.my_work {
+  background-color: var(--clr-dark);
+  text-align: center;
 }
 
 /* my_work-title section */
-.my_work_title{
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
-    text-align: center;
-    margin-bottom: 0.5em;
+.my_work_title {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+  margin-bottom: 0.5em;
 }
 
 /* my_work-subtitle section */
-.section_subtitle--work{
-    color: var(--clr-accent);
-    font-weight: var(--fw-bold);
-    margin-bottom: 2em;
+.section_subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
 }
 
 /* Defining features for a portfolio section*/
-.portfolio{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Will create multiple grids depending on th screen size and the minimum size of each grid is 300px */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 0.5fr)
+  ); /* Will create multiple grids depending on th screen size and the minimum size of each grid is 300px */
 }
 
 /* each portfolio item */
-.portfolio_item{
-    background: var(--clr-dark);
-    overflow: hidden;       
+.portfolio_item {
+  background: var(--clr-dark);
+  overflow: hidden;
 }
+
+/* Defining a grid for My skills section */
+/* .grid-container {
+  display: grid;
+  grid-row-gap: 15px;
+  grid-column-gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 0.5fr));
+  padding: 10px;
+}
+
+.grid-item {
+  border: 0px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+} */
 
 /* Defines features for all the images used in portfolio section */
 .portfolio_img {
-    transition: 
-    transform 750ms cubic-bezier(-5,0,-5,1),
-    opacity 250ms linear;
+  transition: transform 750ms cubic-bezier(-5, 0, -5, 1), opacity 250ms linear;
+  position: relative;
 }
 
-.portfolio_item:focus{
-    position: relative;
-    z-index: 2;
+.portfolio_item:focus {
+  position: relative;
+  z-index: 2;
 }
 
-.portfolio_item:hover{
-    background: var(--clr-accent);
-}
+/* .portfolio_item:hover{ */
+/* background: var(--clr-accent); */
+/* } */
 
 /* Adds style when the images are pointed using the mouse's cursor */
 .portfolio_img:hover,
-.portfolio_item:focus .portfolio_img{            /*It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's Tab key.*/
-    transform: scale(1.2);
-    opacity: .5;
-}   
-
-/* My Skills section */
-.my_skills{
-    text-align: center;
+.portfolio_item:focus .portfolio_img {
+  /*It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's Tab key.*/
+  transform: scale(1.2);
+  opacity: 0.5;
 }
 
-.my_skills_title{
-    margin-bottom: 1em;
+/* My Skills section */
+.my_skills {
+  text-align: center;
+}
+
+.my_skills_title {
+  margin-bottom: 1em;
 }
 
 /* Setting up the pseudo elements */
 .my_skills_title::after {
-    content: '';    /* pseudo elements don't work without content */
-    display: block;
-    width: 3em;
-    height: 1px;
-    margin: 0.5em auto 1em;     /* top left-right bottom*/
-    background: var(--clr-dark);
-    opacity: 0.7;
+  content: ''; /* pseudo elements don't work without content */
+  display: block;
+  width: 3em;
+  height: 1px;
+  margin: 0.5em auto 1em; /* top left-right bottom*/
+  background: var(--clr-dark);
+  opacity: 0.7;
 }
 
-
-.container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* Will create multiple grids depending on th screen size and the minimum size of each grid is 300px */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    grid-gap: 1rem;
-    padding: 1rem 80px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Will create multiple grids depending on th screen size and the minimum size of each grid is 300px */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 80px;
 }
 
-.skill_box{
-    padding: 1rem;
-    cursor: pointer;
+.skill_box {
+  padding: 1rem;
+  cursor: pointer;
 }
 
-.skill_box:hover > .skill_title::after, .skill_box:hover > .skill_title::before{
-    width: 35px;
+.skill_box:hover > .skill_title::after,
+.skill_box:hover > .skill_title::before {
+  width: 35px;
 }
 
-.skill_box:hover .skill_img{
-    transform: translateY(-10px);
+.skill_box:hover .skill_img {
+  transform: translateY(-10px);
 }
-.skill_title{
-    display: flex;
-    flex-direction: column;     /* By default the flex direction is column */
-    align-items: center;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;      
-    position: relative;   
-}
-
-.skill_title::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    align-items: center;
-    width: 50px;
-    height: 4px;
-    border-radius: 2px 0 0 2px;
-    background-color: #16e0bd;
-    transition: .5s;
+.skill_title {
+  display: flex;
+  flex-direction: column; /* By default the flex direction is column */
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
 }
 
-.skill_title::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    align-items: center;
-    width: 0px;
-    height: 4px;
-    border-radius: 2px 0 0 2px;
-    background-color: rgb(228, 92, 115);
-    transition: .5s;
+.skill_title::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  width: 50px;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: #16e0bd;
+  transition: 0.5s;
 }
 
-.skill_icon{
-    width: 50px;
+.skill_title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  width: 0px;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: rgb(228, 92, 115);
+  transition: 0.5s;
 }
 
-.skill_img{
-    width: 90px;
-    height: 90px;
-    position: relative;
-    border-radius: 45px;
-    background-color: rgba(243, 247, 205, 0.664);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .5s;
+.skill_icon {
+  width: 50px;
 }
 
+.skill_img {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: rgba(243, 247, 205, 0.664);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
 
 /* The following property is applied when the resolution of the screen is less than or equal to 900px -if more than 900 then the properties defined above are applied */
-@media (max-width: 990px)
-{
-    .container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (max-width: 990px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* The following property is applied when the resolution of the screen is less than or equal to 600px */
-@media (max-width: 600px)
-{
-    .container{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
+@media (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
-  /* Footer */
-  .footer {
-    background: #111;
-    color: var(--clr-accent);
-    text-align: center;
-    padding: 2.5em 0;
-  }
- 
-  /* To show up the parent's color on the text defined inside the parent - By doing this the links will also have the accent color*/
-  .footer a { 
-    color: inherit; 
-    text-decoration: none;
-    font-size: var(--fs-h3);
-    margin-top: 0.5em;
-    }
+/* Footer */
+.footer {
+  background: #111;
+  color: var(--clr-accent);
+  text-align: center;
+  padding: 2.5em 0;
+}
 
-  /* Styling the footer link text - email address*/
-  .footer_link{
-      font-weight: var(--fw-bold);
-  }
+/* To show up the parent's color on the text defined inside the parent - By doing this the links will also have the accent color*/
+.footer a {
+  color: inherit;
+  text-decoration: none;
+  font-size: var(--fs-h3);
+  margin-top: 0.5em;
+}
+
+/* Styling the footer link text - email address*/
+.footer_link {
+  font-weight: var(--fw-bold);
+}
 /* Creating a hovering effect when pointing the items using a mouse cursor */
 .footer_link:hover,
-.social_list_link:hover{
-    opacity: .7;
+.social_list_link:hover {
+  opacity: 0.7;
 }
 
 /* Create an additional hover effect only on footer_link */
-.footer_link:hover{
-    text-decoration: underline;     /* The text will be decorated only when it is underlined */
+.footer_link:hover {
+  text-decoration: underline; /* The text will be decorated only when it is underlined */
 }
 
 /* Styling the social list items */
 .social_lists {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Here text-align does not work because the items are flex not text*/
-    margin: 2em 0em -2em;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center; Here text-align does not work because the items are flex not text
+  margin: 2em 0em -2em;
+  padding: 0;
 }
 
 /* Style each footer item to create a space around them */
-.social_list_item{
-    margin: 0 2.5em;
+.social_list_item {
+  margin: 0 2.5em;
 }
 
+/* Card */
+.cards-container {
+  box-sizing: border-box;
+  padding: 5px;
+  margin-left: 50px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.card {
+  background-color: rgb(198, 198, 243);
+  width: 300px;
+  height: auto;
+  margin-right: 50px;
+  padding: 5px;
+  box-shadow: 10px 2px 20px rgb(150, 150, 194);
+  transition: 0.5s;
+}
+
+.card:hover {
+  box-shadow: 20px 4px 40px rgb(81, 81, 165);
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+
+.title {
+  text-align: center;
+  padding-top: 30px;
+  font-weight: bold;
+  color: rgb(209, 56, 56);
+}
+
+.card-body {
+  margin-top: 30px;
+}
+
+.card-foot {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 1300px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.do_title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #00ffd5;
+}

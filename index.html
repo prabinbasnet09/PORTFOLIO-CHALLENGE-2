@@ -13,7 +13,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         
         <link rel="stylesheet" href="style.css">
     </head>
@@ -27,7 +28,7 @@
 
             <!-- Creating a navigation bar and the items to be placed ion the navigation menu -->
             <nav class = "nav">
-                <ul class = "nav_list">
+                <ul class = "nav-menu">
                     <li class = "nav_item"><a href="#home" class = "nav_link">Home</a></li>
                     <li class = "nav_item"><a href="#about" class = "nav_link">About me</a></li>
                     <li class = "nav_item"><a href="#work" class = "nav_link">My projects</a></li>
@@ -52,28 +53,28 @@
                 <h2 class = "section_title section_title--services">What I do</h2>
                 <div class = "services"> <!-- defines the list of services -->
                     <div class = "service"> <!-- Defines each service in the list -->
-                        <h3>Design and Development</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam doloremque culpa  
-                        uae voluptate tempribus! Voluptatem,sit quis cum aperiam reiciendis praesentium iste 
-                        corporis at quaerat soluta delectus tempore assumenda qui.</p>
+                        <h3 class = "do_title">Design and Development</h3>
+                        <p> I am passionate about designing and developing websites. I design websites using tools like Figma. I also have 
+                            experience of using photo editing softwares like Adobe. 
+                        </p>
                     </div> <!-- end to service 1 -->
 
                     <div class = "service">
-                        <h3>Data Analyst</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ea voluptate velit harum
-                        beatae reprehenderit quo amet, odit magni natus, consequuntur est, adipisci tempore expedita 
-                        molestiae ad ducimus ratione ex!</p>
+                        <h3 class = "do_title">Data Analyst</h3>
+                        <p> I am much interested in data analysis using python. I am still on my journey in learning data analysis, and 
+                            I hope to get a lot of opportunities to work as a data analyst.  
+                        </p>
                     </div>  <!-- end to service 2-->
 
                     <div class = "service">
-                        <h3>E-commerce</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis iure error ab vel 
-                        beatae expedita unde temporibus veritatis nulla eaque. Molestiae impedit quas eveniet officiis 
-                        quod minus minima repudiandae temporibus?</p>
+                        <h3 class = "do_title">E-commerce</h3>
+                        <p> I also have a bit of interest in E-commerce. The whole world has been digitalized, and now digital marketing 
+                            is one of the most popular service all around the world. 
+                        </p>
                     </div> <!-- end to service 3 -->
                 </div> <!-- end to services -->
 
-                <a href = "#work" class = "btn">My work</a> <!-- creating a direct reference to my wwork section -->
+                <a href = "#work" class = "btn">My work</a> <!-- creating a direct reference to my work section -->
             </section>
 
             <!-- About me -->
@@ -82,11 +83,12 @@
                 <p class = "about_subtitle">Programmer and Designer</p>
 
                 <div class="about_me_body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad consectetur velit rerum corrupti esse 
-                    delectus, dolorum maiores, ex libero molestiae, odio quae illo. Iusto, neque officiis in rerum facilis 
-                    eum! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi assumenda aliquam totam soluta 
-                    recusandae quia itaque doloribus et ipsam nobis laborum laboriosam saepe eius veritatis, quo natus illo 
-                    optio doloremque.</p>
+                    <p> I am a CS undergraduate at the University of Louisiana at Monroe. I am specialized in front end development
+                        with some backend skills. I love designing and building web sites as it makes me feel more creative and productive.
+                        I also have interests in photography and video editing. Besides my academic and professional interests, I love 
+                        playing soccer, cricket, watching movies, and reading blogs. 
+
+                    </p>
                 </div>
 
                 <img src="img3.jpg" alt="" class = "about_me_img">
@@ -96,28 +98,63 @@
             <section id="work" class="my_work">
                 <h2 class="my_work_title">My work</h2>
                 <p class = "section_subtitle section_subtitle--work">A selection of my range of work</p>
+                    <div class="cards-container">
 
-                <div class="portfolio">
-                    <!--Portfolio Item 1-->
-                    <a href="#" class="portfolio_item">
-                        <img src="img4.jpg" alt="" class="portfolio_img">
-                    </a>
-
-                    <!--Portfolio Item 2-->
-                    <a href="#" class="portfolio_item">
-                        <img src="img4.jpg" alt="" class="portfolio_img">
-                    </a>
-
-                    <!--Portfolio Item 3-->
-                    <a href="#" class="portfolio_item">
-                        <img src="img4.jpg" alt="" class="portfolio_img">
-                    </a>
-
-                    <!--Portfolio Item 4-->
-                    <a href="#" class="portfolio_item">
-                        <img src="img4.jpg" alt="" class="portfolio_img">
-                    </a>
-                </div>
+                        <div class="card">
+                            <h3 class = "title">Adidas Store</h3>
+                            <p class = "lead card-body">
+                                A template for an online adidas shopping. Similar to cloning a adidas webpage.   
+                            </p>
+                
+                            <div class="card-foot">
+                                <a href= "https://github.com/prabinbasnet09/adidas-clone" class="btn btn-dark mt-3" target = "_blank"><i class="bi bi-chevron-right"></i>View More</a>
+                            </div>
+                        </div>
+                
+                        
+                        <div class="card">
+                            <h3 class = "title">GitHub Search</h3>
+                            <p class = "lead card-body">
+                                A GithHub Search webpage designed and developed using javascript and GithHub fetch API.   
+                            </p>
+                
+                            <div class="card-foot">
+                                <a href= "https://github.com/prabinbasnet09/GitHub-Finder" class="btn btn-dark mt-3" target = "_blank"><i class="bi bi-chevron-right"></i>View More</a>
+                            </div>
+                        </div>
+                
+                        <div class="card">
+                            <h3 class = "title">Learn Everyday</h3>
+                            <p class = "lead card-body">
+                                A template of a commercial website for an online learning platform for programming and other computer science stuff.   
+                            </p>
+                
+                            <div class="card-foot">
+                                <a href= "https://github.com/prabinbasnet09/Bootstrap-5" class="btn btn-dark mt-3" target = "_blank"><i class="bi bi-chevron-right"></i>View More</a>
+                            </div>
+                        </div>
+                
+                        <div class="card">
+                            <h3 class = "title">Book Store</h3>
+                            <p class = "lead card-body">
+                                A simple book store web design created using HTML and javascript.   
+                            </p>
+                
+                            <div class="card-foot">
+                                <a href= "https://github.com/prabinbasnet09/Book-Store" class="btn btn-dark mt-3" target = "_blank"><i class="bi bi-chevron-right"></i>View More</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class = "title">To-Do List</h3>
+                            <p class = "lead card-body">
+                                A simple To-Do list application to organize tasks effectively.   
+                            </p>
+                
+                            <div class="card-foot">
+                                <a href= "https://github.com/prabinbasnet09/To-Do-List" class="btn btn-dark mt-3" target = "_blank"><i class="bi bi-chevron-right"></i>View More</a>
+                            </div>
+                        </div>
+                   </div>
             </section>
 
             <section id="skills" class="my_skills">
@@ -127,73 +164,65 @@
                     <div class="skill_box">
                         <div class="skill_title">
                             <div class="skill_img">
-                                <img src = "/java.jpg" class = "skill_icon">
+                                <img src = "java.jpg" class = "skill_icon">
                             </div>
                             <p class = "language_name"><strong>JAVA</strong></p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
-                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
-                            Voluptas error qui id? Delectus, odit.</p>
+                        <p>Create java applications with extensive knowledge in Spring frameworks and Rest API</p>
                     </div>
 
                     <div class="skill_box">
                         <div class="skill_title">
                             <div class="skill_img">
-                                <img src = "/python.png" class = "skill_icon">
+                                <img src = "python.png" class = "skill_icon">
                             </div>
                             <p class = "language_name"><strong>Python</strong></p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
-                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
-                            Voluptas error qui id? Delectus, odit.</p>
+                        <p>Sound knowledge of Python web frameworks and event-driven programming in Python.
+
+                        </p>
                     </div>
 
                     <div class="skill_box">
                         <div class="skill_title">
                             <div class="skill_img" class="skill_icon">
-                                <img src = "/javascript.png" class = "skill_icon">
+                                <img src = "javascript.png" class = "skill_icon">
                             </div>
                             <p class = "language_name"><strong>JavaScript</strong></p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
-                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
-                            Voluptas error qui id? Delectus, odit.</p>
+                        <p>Fair understanding of JavaScript programming like DOM manipulation, asynchronous and functional
+                            programming, and Node JS. Build web based applications using React. 
+                             </p>
                     </div>
 
                     <div class="skill_box">
                         <div class="skill_title">
                             <div class="skill_img">
-                                <img src = "/html5.png" class="skill_icon">
+                                <img src = "html5.png" class="skill_icon">
                             </div>
                             <p class = "language_name"><strong>HTML 5</strong></p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
-                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
-                            Voluptas error qui id? Delectus, odit.</p>
+                        <p> Strong foundation of Markup Language. Build static and dynamic web pages with better structuring of the content</p>
                     </div>
 
                     <div class="skill_box">
                         <div class="skill_title">
                             <div class="skill_img">
-                                <img src = "/css3.png" class="skill_icon">
+                                <img src = "css3.png" class="skill_icon">
                             </div>
                             <p class = "language_name"><strong>CSS 3</strong></p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
-                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
-                            Voluptas error qui id? Delectus, odit.</p>
+                        <p>Better formatting of the content in a web page with creative styles and design</p>
                     </div>
 
                     <div class="skill_box">
                         <div class="skill_title">
                             <div class="skill_img">
-                                <img src = "/sql.png" class="skill_icon">
+                                <img src = "sql.png" class="skill_icon">
                             </div>
                             <p class = "language_name"><strong>PostgreSQL</strong></p>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quidem tempore ducimus nisi 
-                            aperiam explicabo voluptatibus esse dignissimos optio quo enim aspernatur, consequatur officiis. 
-                            Voluptas error qui id? Delectus, odit.</p>
+                        <p>Better understanding for creating, maintaining, and retrieving information from relational databases. </p>
                     </div>
 
                 </div>
@@ -201,26 +230,25 @@
             </section>
         <!--Footer-->
         <footer id= "contact" class = "footer">
-            <a href="prabinbasnet09@gmail.com" class="footer_link">prabinbasnet09@gmail.com</a>
+            <a href="mailto:prabinbasnet09@gmail.com" class="footer_link">prabinbasnet09@gmail.com</a>
 
             <ul class = "social_lists">
                 <li class="social_list_item">
-                    <a class="social_list_link" href = "#"><i class="fab fa-github"></i></a>
+                    <a class="social_list_link" href = "https://github.com/prabinbasnet09"><i class="fab fa-github"></i></a>
                 </li>
                 
                 <li class="social_list_item">
-                    <a class="social_list_link" href = "#"><i class="fab fa-linkedin"></i></a>
+                    <a class="social_list_link" href = "https://www.linkedin.com/in/prabin-basnet-a6aa98183/"><i class="fab fa-linkedin"></i></a>
                 </li>
                
                 <li class="social_list_item">
-                    <a class="social_list_link" href = "#"><i class="fab fa-twitter"></i></a>
+                    <a class="social_list_link" href = "https://twitter.com/PrabinB53230763"><i class="fab fa-twitter"></i></a>
                 </li>
                 <li class="social_list_item">
-                    <a class="social_list_link" href = "#"><i class="fab fa-facebook"></i></a>
+                    <a class="social_list_link" href = "https://www.facebook.com/prabin.basnet.5205"><i class="fab fa-facebook"></i></a>
                 </li>
             </ul>
         </footer>
-
         <script src="/navigation.js"></script>
 
     </body>
